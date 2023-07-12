@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 200, "left": 20, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 516.64,
+      "left": 57.26,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-ky-040",
+      "id": "encoder1",
+      "top": 400.75,
+      "left": 321.62,
+      "rotate": 180,
+      "attrs": {}
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": 288.04, "left": 555.42, "attrs": {} }
+  ],
+  "connections": [
+    [ "lcd1:GND", "uno:GND.2", "black", [ "h-9.28", "v-88.51", "h137.52" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h-19.01", "v-88.29", "h137.75" ] ],
+    [ "lcd1:SDA", "uno:A4", "green", [ "v0.3", "h-29.55", "v-76.2", "h234.29" ] ],
+    [ "lcd1:SCL", "uno:A5", "green", [ "h-39.28", "v-96.75", "h253.52" ] ],
+    [ "encoder1:GND", "uno:GND.3", "black", [ "h0" ] ],
+    [ "encoder1:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "encoder1:CLK", "uno:2", "green", [ "h0" ] ],
+    [ "encoder1:DT", "uno:3", "green", [ "h0" ] ],
+    [ "encoder1:SW", "uno:4", "orange", [ "h0" ] ],
+    [ "servo1:GND", "uno:GND.3", "black", [ "h-249.57", "v93.67", "h-106.85" ] ],
+    [ "servo1:V+", "uno:5V", "red", [ "h-84.01", "v161.03", "h-291.41" ] ],
+    [ "servo1:PWM", "uno:6", "gold", [ "h-194.38", "v-204.23", "h-99.54" ] ]
+  ],
+  "dependencies": {}
+}
